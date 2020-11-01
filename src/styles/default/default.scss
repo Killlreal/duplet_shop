@@ -1,0 +1,36 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "FuturaBookC";
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 0 0 auto;
+}
+
+.wrapper {
+  max-width: 1350px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.block {
+  width: 20px;
+  height: 20px;
+  border: solid blue;
+}

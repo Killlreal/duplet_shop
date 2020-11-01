@@ -1,0 +1,134 @@
+.news {
+  width: 100wh;
+  height: 773px;
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+    &_title {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+      text-align: center;
+
+      .title_main {
+        font-weight: normal;
+        font-size: 72px;
+        line-height: 125%;
+        color: #333333;
+      }
+
+      .title_description {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+        color: #888888;
+      }
+    }
+
+    &_cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .choose {
+        max-width: 620px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 20px;
+        margin-bottom: 36px;
+
+        [class*="for__"] {
+          background: #e0e0e0;
+          text-align: center;
+          line-height: 46px;
+          width: 140px;
+          height: 46px;
+          color: #888888;
+          cursor: pointer;
+
+          &:hover {
+            background: #333;
+            color: #fff;
+          }
+        }
+      }
+
+      .swiper-container {
+        display: grid;
+        grid-template-columns: repeat(4, 315px);
+        column-gap: 30px;
+        width: 100%;
+        height: 360px;
+
+        .swiper-slide {
+          background: #e0e0e0;
+
+          .img_swiper {
+            display: block;
+            margin: auto;
+          }
+
+          .swiper_price {
+            width: 100%;
+            height: 100px;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &_flex {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              height: 60px;
+
+              .swiper_price_title {
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 20px;
+                text-transform: uppercase;
+              }
+
+              .swiper_price_cost {
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 20px;
+                text-transform: uppercase;
+                color: #888888;
+              }
+            }
+
+            .swiper__link {
+              font-size: 40px;
+              width: 44px;
+              height: 44px;
+              border-radius: 50%;
+              background: #333333;
+              color: white;
+
+              &:hover {
+                background: #9d2f2f;
+              }
+
+              figure {
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &_to-catalog {
+      text-decoration: none;
+      color: #888888;
+      border-bottom: 1px solid #888888;
+      padding-bottom: 5px;
+    }
+  }
+}

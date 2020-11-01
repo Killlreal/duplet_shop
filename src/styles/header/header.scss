@@ -1,0 +1,103 @@
+.header {
+  width: 100wh;
+  height: 90px;
+  background-color: #333333;
+
+  .header__flex {
+    display: flex;
+    height: 100%;
+
+    .logo {
+      display: block;
+      border-radius: 50%;
+      padding-right: 40px;
+    }
+
+    .nav {
+      max-width: 360px;
+      display: flex;
+      align-items: center;
+      margin-right: 347px;
+
+      .nav__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 40px;
+        list-style-type: none;
+        align-items: center;
+
+        .nav__title {
+          display: flex;
+
+        }
+
+        &_link {
+          color: #fff;
+          text-decoration: none;
+
+          &:hover {
+            color: #9D2F2F;
+          }
+        }
+
+        .menu {
+          display: flex;
+          align-items: center;
+
+          span {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+
+    .phone {
+      color: white;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 18px;
+      max-width: 290px;
+      margin-right: 65px;
+      display: grid;
+      grid-template-columns: repeat(2, 135px);
+      column-gap: 30px;
+      align-items: center;
+    }
+
+    .profile {
+      max-width: 186px;
+      color: white;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 30px;
+      align-items: center;
+
+      a {
+        color: white;
+      }
+
+      .icon-liked,
+      .icon-basket {
+        position: relative;
+      }
+
+      .icon-liked_number,
+      .icon-basket_number {
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background-color: #9d2f2f;
+        font-weight: 600;
+        font-size: 8px;
+        line-height: 12px;
+        position: absolute;
+        left: 50%;
+        right: 0%;
+        top: 50%;
+        bottom: 0%;
+        text-align: center;
+      }
+    }
+  }
+}

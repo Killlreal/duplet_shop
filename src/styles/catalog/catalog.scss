@@ -1,0 +1,58 @@
+.catalog {
+  width: 100wh;
+  .catalog-guns__title {
+    text-align: center;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 125%;
+    color: #333333;
+  }
+  .cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 315px));
+    column-gap: 30px;
+    row-gap: 40px;
+  }
+  .card {
+    text-decoration: none;
+    color: #333;
+    &__img {
+      background: #e0e0e0;
+      padding: 20px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      display: block;
+    }
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &_title {
+        display: grid;
+        row-gap: 20px;
+        &_name {
+          font-size: 18px;
+          line-height: 20px;
+          text-transform: uppercase;
+        }
+        &_price {
+          font-size: 18px;
+          line-height: 20px;
+          text-transform: uppercase;
+          color: #888888;
+        }
+      }
+      .icon-add {
+        font-size: 40px;
+        border-radius: 50%;
+        background: #333333;
+        width: 44px;
+        height: 44px;
+        text-align: center;
+        color: white;
+      }
+    }
+  }
+}
