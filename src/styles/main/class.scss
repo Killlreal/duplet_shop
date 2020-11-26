@@ -1,7 +1,9 @@
 @import "../mixins/mixins";
+
 .class {
   width: 100wh;
   height: 1020px;
+  margin-bottom: 80px;
 
   .class__title {
     text-align: center;

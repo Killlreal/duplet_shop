@@ -1,11 +1,12 @@
 .welcome {
-  width: 100wh;
+  width: 100%;
   height: 940px;
   display: flex;
   justify-content: flex-end;
   margin-bottom: 90px;
 
   &__catalog {
+    margin: 0 auto;
     width: 1635px;
     height: 100%;
     display: grid;
@@ -99,7 +100,8 @@
     }
   }
 }
-@import "news";
+
+@import "novelty";
 @import "class";
 @import "action";
 @import "tidings";

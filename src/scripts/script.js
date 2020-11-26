@@ -1,27 +1,23 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
+let ondesc = document.querySelector('.js-description');
+let onchar = document.querySelector('.js-characteristic')
+let char = document.querySelector('.card__characteristic');
+let description = document.querySelector('.card__description')
+let color = document.querySelector('.color')
 
-Swiper.use([Navigation, Pagination]);
+ondesc.onclick = function () {
+    description.classList.remove('hidden')
+    char.classList.add('hidden')
+    ondesc.classList.remove('color')
+    onchar.classList.add('color')
+}
+onchar.onclick = function () {
+    description.classList.add('hidden')
+    char.classList.remove('hidden')
+    ondesc.classList.add('color')
+    onchar.classList.remove('color')
 
-var mySwiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    direction: 'vertical',
-    loop: true,
+}
 
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-})
 
 
