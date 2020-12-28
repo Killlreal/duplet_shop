@@ -48,7 +48,7 @@
           opacity: 0;
         }
 
-        .custom-radio+label {
+        .custom-radio + label {
           background: #e0e0e0;
           text-align: center;
           line-height: 46px;
@@ -64,7 +64,7 @@
           }
 
           &::before {
-            content: '';
+            content: "";
             position: absolute;
             background: url("../img/novelty.svg") no-repeat;
             width: 20px;
@@ -76,7 +76,7 @@
         }
 
         /* стили для радиокнопки, находящейся в состоянии checked */
-        .custom-radio:checked+label {
+        .custom-radio:checked + label {
           background: #333;
           color: white;
 
@@ -86,7 +86,7 @@
         }
 
         /* стили для радиокнопки, находящейся в состоянии disabled */
-        .custom-radio:disabled+label {
+        .custom-radio:disabled + label {
           background-color: red;
         }
       }
@@ -95,7 +95,7 @@
         display: none;
       }
 
-      @import "./main-slider";
+      @import "../slider/main-slider";
     }
 
     &_to-catalog {
@@ -107,4 +107,4 @@
   }
 }
 
-@import './novelty-media';
+@import "./novelty-media";
