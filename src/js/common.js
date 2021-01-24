@@ -38,89 +38,57 @@ var mySwiper = new Swiper('.image__slider', {
     }
 })
 
-var mySwiper = new Swiper('.tidings__slider', {
-    direction: 'horizontal',
-    loop: true,
-    slidesPerView: 1,
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-    },
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-});
 
-
-var galleryThumbs = new Swiper('.gallery-thumbs', {
+var sliderSidebar = new Swiper('.slider__sidebar', {
+    direction: 'vertical',
     spaceBetween: 10,
     slidesPerView: 4,
     loop: true,
-    freeMode: true,
-    loopedSlides: 5, //looped slides should be the same
+    grabCursor: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+        200: {
+            direction: 'horizontal',
+            slidesPerView: 3,
+        },
+        1201: {
+            direction: 'vertical',
+            spaceBetween: 10,
+            slidesPerView: 4,
+        }
+    }
+});
+
+var sliderMain = new Swiper('.slider__main', {
+    slidesPerView: 1,
+    loop: true,
+    grabCursor: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
 });
 
-var galleryTop = new Swiper('.gallery-top', {
-    spaceBetween: 10,
-    loop: true,
-    loopedSlides: 5, //looped slides should be the same
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    thumbs: {
-        swiper: galleryThumbs,
-    },
-});
-
-var galleryThumbs = new Swiper('.location__slider', {
-    slidesPerView: 1,
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-    },
-});
-
-
-var mySwiper = new Swiper('.category__slider', {
-    direction: 'horizontal',
-    loop: true,
-    slidesPerView: 4,
+var cardSeenSlider = new Swiper('.card__seen_slider', {
     spaceBetween: 20,
+    slidesPerView: 2,
+    loop: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
     pagination: {
         el: '.swiper-pagination',
         clickable: true
-    },
-    scrollbar: {
-        el: '.swiper-scrollbar',
     },
     breakpoints: {
-        220: {
+        200: {
             slidesPerView: 1,
-            spaceBetween: 20,
         },
-        640: {
+        1201: {
             slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 40,
-        },
-        992: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-        1200: {
-            slidesPerView: 3,
-            spaceBetween: 15,
-        },
+        }
     }
-})
+    
+});
+
 
 // main page
 
@@ -128,7 +96,7 @@ let burger = document.querySelector('.menu__btn');
 let headerPopup = document.querySelector('.header__popup');
 let lockScroll = document.querySelector('body')
 
-burger.onclick = function() {
+burger.onclick = function () {
     burger.classList.toggle('menu__btn_active');
     headerPopup.classList.toggle('header__popup_show');
     lockScroll.classList.toggle('lock__scroll');

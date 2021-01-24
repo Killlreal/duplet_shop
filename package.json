@@ -41,7 +41,7 @@
     "webpack-merge": "^5.0.9"
   },
   "dependencies": {
-    "swiper": "^6.3.5",
+    "swiper": "^6.4.8",
     "vue": "^2.6.12"
   }
 }

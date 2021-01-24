@@ -1,0 +1,15 @@
+.similar__things {
+  width: 100%;
+  margin-bottom: 80px;
+
+  &_title {
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 125%;
+    color: #333333;
+    margin-bottom: 40px;
+  }
+
+  @import "../slider/main-slider";
+}
+@import "./card-similar-things-media";

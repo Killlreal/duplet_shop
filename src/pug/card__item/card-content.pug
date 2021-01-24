@@ -1,0 +1,61 @@
+include ../mixins/test.pug
+include ../mixins/card.pug
+section.card__item
+    .wrapper
+        .card__box
+            .card__item_name_mobile ТОЗ-34Р (орех)
+            .slider__box
+                .swiper-container.slider__sidebar
+                    .swiper-wrapper
+                        .swiper-slide
+                            .slider__sidebar_box
+                                img.slider__sidebar_img(src=require("../../img/termos.jpg").default, alt="")
+                        .swiper-slide
+                            .slider__sidebar_box
+                                img.slider__sidebar_img(src=require("../../img/termos.jpg").default, alt="")
+                        .swiper-slide
+                            .slider__sidebar_box
+                                img.slider__sidebar_img(src=require("../../img/termos.jpg").default, alt="")
+                        .swiper-slide
+                            .slider__sidebar_box
+                                img.slider__sidebar_img(src=require("../../img/termos.jpg").default, alt="")
+                .swiper-container.slider__main
+                    .swiper-wrapper
+                        .swiper-slide
+                            .slider__main_box
+                                img.slider__main_img(src=require("../../img/gun.png").default, alt="")
+                        .swiper-slide
+                            .slider__main_box
+                                img.slider__main_img(src=require("../../img/termos.jpg").default, alt="")
+            .card__benefits
+                .card__title 
+                    .card__title_name Гладкоствольное ружье 
+                    .card__title_brand
+                        .brand__title Бренд:
+                        .brand__name Тульский оружейный завод
+                h1.card__item_name ТОЗ-34Р (орех)
+                p.card__item_text.
+                    Двухствольное охотничье ружьё лёгкого типа с низкой посадкой стволов,
+                    предназначенное для промысловой и любительской охоты, 
+                    разработанное  конструктором-оружейником Н. И. Коровяковым.
+                .card__item_price
+                    .price__discount ₽ 45 999
+                    .price__box
+                        .price__cost ₽ 39 999
+                        .price__available В наличии
+                .order__box
+                    .order__container
+                        input.choose__number(type="number" min="1" max="50")
+                        button.to__cart(type="submit") в корзину
+                    .to__favorite
+                        figure.icon-liked
+                        span.to__favorite_title Добавить в избранное
+                .card__item_category
+                    .category__title Категория:
+                    .category__name Ружья
+        include card__wrapper.pug
+include card-similar-things.pug
+include card-recently-seen.pug
+
+
+
