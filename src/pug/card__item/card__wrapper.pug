@@ -4,7 +4,7 @@ include ../mixins/card.pug
         .title__box
             .title__description Описание
             .title__characteristic Характеристики
-        .card__description.hidden
+        .card__description
             p.card__description_text.
                 Бескурковое двуствольное охотничье ружьё с вертикально расположенными стволами 12, 16, 20 и 28-го калибров.
                 Явилось первой отечественной моделью серийного бокфлинта, имеющего малый вес. Ружья отличаются современными 
@@ -23,7 +23,7 @@ include ../mixins/card.pug
                 Цевьё — неотъёмное, состоит из двух частей, закреплённых на стволах винтами.
             p.card__description_text.
                 Приклад с пистолетной формой шейки с выступом под щёку выполнен из берёзовой, ореховой или буковой древесины.
-        .card__characteristic
+        .card__characteristic.hidden
             .characteristic__brand.characteristic__box
                 .characteristic__title Бренд:
                 .characteristic__desc Тульский оружейный завод (ТОЗ)
@@ -70,3 +70,4 @@ include ../mixins/card.pug
                 .swiper-slide
                     +card__widthout('КОСТЮМ АНТИГНУС ДЕТСКИЙ ТК. СМЕСОВАЯ ЦВ. ЛЕС (РАЗМЕР 36-38/134-140)')
             .swiper-pagination
+        a.to__catalog_link(href="#") Смотреть все

@@ -1,5 +1,4 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
-Swiper.use([Navigation, Pagination]);
+import Swiper from 'swiper/bundle';
 
 
 var mySwiper = new Swiper('.image__slider', {
@@ -19,7 +18,7 @@ var mySwiper = new Swiper('.image__slider', {
             slidesPerView: 1,
             spaceBetween: 20,
         },
-        640: {
+        560: {
             slidesPerView: 2,
             spaceBetween: 20,
         },
@@ -44,7 +43,6 @@ var sliderSidebar = new Swiper('.slider__sidebar', {
     spaceBetween: 10,
     slidesPerView: 4,
     loop: true,
-    grabCursor: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
     breakpoints: {
@@ -63,9 +61,11 @@ var sliderSidebar = new Swiper('.slider__sidebar', {
 var sliderMain = new Swiper('.slider__main', {
     slidesPerView: 1,
     loop: true,
-    grabCursor: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
+    thumbs: {
+        swiper: sliderSidebar
+    }
 });
 
 var cardSeenSlider = new Swiper('.card__seen_slider', {
@@ -86,7 +86,7 @@ var cardSeenSlider = new Swiper('.card__seen_slider', {
             slidesPerView: 2,
         }
     }
-    
+
 });
 
 
@@ -161,3 +161,30 @@ cancelhBtnMobile.onclick = () => {
     mobileBlock.classList.remove('mobile__block_active');
     blockSecond.classList.remove('block__second_active');
 }
+
+// card__wrapper
+
+
+let description = document.querySelector('.title__description');
+let characteristic = document.querySelector('.title__characteristic');
+let descriptionBlock = document.querySelector('.card__description');
+let characteristicBlock = document.querySelector('.card__characteristic');
+
+
+description.onclick = () => {
+    if (descriptionBlock.classList.contains('hidden')) {
+        descriptionBlock.classList.remove('hidden');
+        characteristicBlock.classList.add('hidden');
+    }
+
+}
+
+characteristic.onclick = () => {
+    if (characteristicBlock.classList.contains('hidden')) {
+        characteristicBlock.classList.remove('hidden');
+        descriptionBlock.classList.add('hidden');
+
+    }
+
+}
+

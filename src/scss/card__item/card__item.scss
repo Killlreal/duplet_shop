@@ -1,3 +1,6 @@
+@import "../vars/vars";
+@import "../popup/popup__card__item";
+
 .card__item {
   width: 100%;
   margin-top: 50px;
@@ -9,24 +12,24 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 60px;
-    border: 1px solid red;
+
     .card__item_name_mobile {
       display: none;
       font-size: 34px;
       text-align: center;
       margin-bottom: 30px;
     }
+
     .slider__box {
       display: flex;
       height: 573px;
       width: 53%;
-      border: 3px solid #000;
-      //margin-right: 30px;
+
 
       .slider__main {
-        width: 83%;
+        width: 80%;
         height: 100%;
-        border: 1px solid green;
+
         &_box {
           width: 100%;
           height: 100%;
@@ -42,19 +45,21 @@
             background: #e0e0e0;
             width: 100%;
             height: 100%;
-            border: 3px solid red;
             object-fit: auto;
           }
         }
       }
 
       .slider__sidebar {
-        width: 130px;
+        margin-right: 20px;
+        width: 20%;
+        max-width: 136px;
         height: 100%;
-        border: 1px solid green;
+
         .swiper-wrapper {
-          height: auto;
+          height: 100%;
         }
+
         &_box {
           width: 100%;
           height: 100%;
@@ -66,165 +71,17 @@
             background: #e0e0e0;
             width: 100%;
             height: 100%;
-            border: 3px solid red;
-            object-fit: auto;
           }
         }
       }
     }
 
-    .card__benefits {
-      width: 42%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      border: 1px solid #000;
-
-      .card__title {
-        font-size: 18px;
-        line-height: 125%;
-        color: #888888;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 40px;
-        flex-wrap: wrap;
-
-        &_name {
-          margin-bottom: 10px;
-          margin-right: 20px;
-        }
-
-        &_brand {
-          display: flex;
-
-          .brand__name {
-            margin-left: 5px;
-            color: #888888;
-          }
-        }
-      }
-
-      .card__item_name {
-        font-weight: normal;
-        font-size: 48px;
-        line-height: 125%;
-        margin-bottom: 30px;
-      }
-
-      .card__item_text {
-        margin-bottom: 40px;
-      }
-
-      .card__item_price {
-        display: flex;
-        align-items: center;
-        margin-bottom: 60px;
-        flex-wrap: wrap;
-
-        .price__discount {
-          font-weight: normal;
-          font-size: 24px;
-          line-height: 125%;
-          text-decoration: line-through;
-          margin-right: 30px;
-        }
-
-        .price__box {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-
-        .price__cost {
-          font-weight: normal;
-          font-size: 48px;
-          line-height: 125%;
-          color: #9d2f2f;
-          margin-right: 45px;
-        }
-
-        .price__available {
-          color: #5a9e08;
-        }
-      }
-
-      .order__box {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        width: 100%;
-        margin-bottom: 50px;
-        border: 1px solid #000;
-        .order__container {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-right: 41px;
-          .choose__number {
-            width: 85px;
-            height: 70px;
-            padding-left: 25px;
-            margin-right: 30px;
-          }
-
-          .to__cart {
-            width: 230px;
-            min-width: 150px;
-            height: 70px;
-            background: #333333;
-            cursor: pointer;
-            font-size: 18px;
-            line-height: 20px;
-            text-transform: uppercase;
-            color: #e0e0e0;
-            border: none;
-          }
-        }
-
-        .to__favorite {
-          height: 24px;
-          width: 24px;
-          display: flex;
-          align-items: center;
-          .icon-liked {
-            cursor: pointer;
-            font-size: 22px;
-
-            &:hover {
-              color: red;
-            }
-          }
-          &_title {
-            width: 100%;
-            margin-left: 10px;
-            display: none;
-            font-size: 14px;
-            line-height: 125%;
-          }
-        }
-      }
-
-      .card__item_category {
-        display: flex;
-        font-size: 18px;
-        line-height: 125%;
-
-        .category__title {
-          color: #888888;
-          margin-right: 20px;
-        }
-
-        .category__name {
-          color: #333333;
-        }
-      }
-    }
+    @import './card__benefits';
   }
 
   @import "card__item__wrapper";
 }
 
-@import "card-similar-things";
-@import "card-recently-seen";
+@import "./card__item__sliders";
 
 @import "./card__item-media";

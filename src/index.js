@@ -1,4 +1,4 @@
-import './js/common.js';
+import './js/script.js';
 import './scss/style.scss';
 
 

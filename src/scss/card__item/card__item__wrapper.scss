@@ -8,7 +8,6 @@
   }
 
   .card__inner {
-    border: 1px solid red;
     width: 40.8%;
     display: flex;
     flex-direction: column;
@@ -18,7 +17,6 @@
       display: grid;
       grid-template-columns: 55% 45%;
       margin-bottom: 45px;
-      border: 1px solid #000;
       font-size: 40px;
       line-height: 125%;
 
@@ -26,6 +24,7 @@
       .title__characteristic {
         cursor: pointer;
       }
+
       .title__description {
         margin-right: 20px;
       }
@@ -35,8 +34,11 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       color: #888888;
+
+      &_text {
+        margin-bottom: 20px;
+      }
     }
 
     .card__characteristic {
@@ -68,8 +70,10 @@
       display: none;
     }
   }
+
   .card__seen {
     width: 50%;
+
     &_title {
       font-weight: normal;
       font-size: 48px;
@@ -81,4 +85,5 @@
     @import "../slider/main-slider";
   }
 }
+
 @import "./card__item__wrapper-media";

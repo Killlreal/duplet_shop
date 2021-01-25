@@ -1,5 +1,6 @@
 include ../mixins/test.pug
 include ../mixins/card.pug
+include ../popup/popup__card__item.pug
 section.card__item
     .wrapper
         .card__box
@@ -9,16 +10,16 @@ section.card__item
                     .swiper-wrapper
                         .swiper-slide
                             .slider__sidebar_box
-                                img.slider__sidebar_img(src=require("../../img/termos.jpg").default, alt="")
+                                img.slider__sidebar_img(src=require("../../img/gun.png").default, alt="")
                         .swiper-slide
                             .slider__sidebar_box
                                 img.slider__sidebar_img(src=require("../../img/termos.jpg").default, alt="")
                         .swiper-slide
                             .slider__sidebar_box
-                                img.slider__sidebar_img(src=require("../../img/termos.jpg").default, alt="")
+                                img.slider__sidebar_img(src=require("../../img/ammo.png").default, alt="")
                         .swiper-slide
                             .slider__sidebar_box
-                                img.slider__sidebar_img(src=require("../../img/termos.jpg").default, alt="")
+                                img.slider__sidebar_img(src=require("../../img/bear.png").default, alt="")
                 .swiper-container.slider__main
                     .swiper-wrapper
                         .swiper-slide
@@ -27,6 +28,12 @@ section.card__item
                         .swiper-slide
                             .slider__main_box
                                 img.slider__main_img(src=require("../../img/termos.jpg").default, alt="")
+                        .swiper-slide
+                            .slider__main_box
+                                img.slider__main_img(src=require("../../img/ammo.png").default, alt="")
+                        .swiper-slide
+                            .slider__main_box
+                                img.slider__main_img(src=require("../../img/bear.png").default, alt="")
             .card__benefits
                 .card__title 
                     .card__title_name Гладкоствольное ружье 
@@ -46,7 +53,7 @@ section.card__item
                 .order__box
                     .order__container
                         input.choose__number(type="number" min="1" max="50")
-                        button.to__cart(type="submit") в корзину
+                        button.to__cart.add__to__cart(type="submit") в корзину
                     .to__favorite
                         figure.icon-liked
                         span.to__favorite_title Добавить в избранное
