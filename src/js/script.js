@@ -188,3 +188,19 @@ characteristic.onclick = () => {
 
 }
 
+// popup card__item
+
+let linkCart = document.querySelector('.add__to__cart');
+let popUp = document.querySelector('.popup__card__item');
+let closeBtn = document.querySelector('.close__popup');
+
+
+linkCart.onclick = () => {
+    popUp.classList.add('open__popup');
+}
+
+closeBtn.onclick = () => {
+    popUp.classList.remove('open__popup');
+
+}
+

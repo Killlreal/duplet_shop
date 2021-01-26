@@ -1,11 +1,22 @@
 .card {
     height: 146px;
-    //display: grid;
-    //grid-template-columns: 46% 7% 10% 7% 9%;
-    display: flex;
-    justify-content: space-between;
     position: relative;
     margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 43% 7% 11% 12% 12%;
+    justify-content: space-between;
+
+    .card__info:nth-of-type(3) {
+        text-align: center;
+    }
+
+    .card__info:nth-of-type(4) {
+        text-align: center;
+    }
+
+    .card__info:last-child {
+        text-align: end;
+    }
 
     &__act {
         position: absolute;
@@ -13,34 +24,39 @@
         bottom: 0;
         display: flex;
 
-        .card__bookmark {
+        .card__favorite,
+        .card__delete {
+            color: #888888;
+            font-size: 14px;
+            line-height: 125%;
+            cursor: pointer;
             display: flex;
+
+            .card__icon {
+                font-size: 16px;
+            }
+
+            .card__title {
+                font-family: FuturaBookC;
+                font-style: normal;
+                font-weight: normal;
+                margin-left: 10px;
+            }
+
+            &:hover {
+                color: #9D2F2F;
+            }
+        }
+
+        .card__favorite {
             margin-right: 30px;
         }
 
-        .card__delete {
-            display: flex;
-        }
-
-        .card__icon {
-            width: 16px;
-            height: 16px;
-        }
-
-        .card__title {
-            color: #888888;
-            font-family: FuturaBookC;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 125%;
-            margin-left: 10px;
-        }
     }
 
     &__des {
         display: flex;
-        width: 43%;
+        width: 100%;
 
         .card__img {
             max-width: 130px;
@@ -148,7 +164,6 @@
     &__number,
     &__in-all {
         display: flex;
-        justify-content: center;
         align-items: center;
     }
 

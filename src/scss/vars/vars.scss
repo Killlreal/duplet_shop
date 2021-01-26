@@ -4,7 +4,7 @@
   padding-bottom: 5px;
   position: relative;
   display: block;
-  width: 87px;
+  min-width: 87px;
   margin: 0 auto;
   margin-top: 50px;
 
@@ -31,7 +31,7 @@
   }
 }
 
-.to__cart {
+.btn {
   text-decoration: none;
   color: #fff;
   background: #333;
@@ -43,10 +43,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  &_name {
+
+  &__name {
     position: relative;
   }
-  &_name::before {
+
+  &__name::before {
     content: "";
     background: #fff;
     position: absolute;
@@ -56,14 +58,15 @@
     width: 0;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
-  &:hover .to__cart_name::before {
+
+  &:hover .btn__name::before {
     width: 100%;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 }
 
 @media (max-width: 768px) {
-  .to__cart {
+  .btn {
     font-size: 16px;
     line-height: 18px;
   }

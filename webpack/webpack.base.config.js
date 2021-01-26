@@ -13,7 +13,7 @@ const PATHS = {
     dist: path.join(__dirname, '../dist'),
 }
 
-const PAGES_DIR = `${PATHS.src}/pug/card__item`
+const PAGES_DIR = `${PATHS.src}/pug/cart`
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
 module.exports = {

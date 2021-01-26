@@ -1,0 +1,13 @@
+@media(max-width: 1400px) {
+    .cart {
+        &__order {
+            .cards {
+                width: 100%;
+            }
+
+            .confirm {
+                display: none;
+            }
+        }
+    }
+}

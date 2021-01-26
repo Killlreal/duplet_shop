@@ -1,4 +1,4 @@
-.put-in-order {
+.confirm {
     font-family: FuturaBookC;
     font-style: normal;
     font-weight: normal;
@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    .put-in-order__box {
+    &__box {
         border: 1px solid #E0E0E0;
         padding: 30px 20px;
 
@@ -73,7 +73,7 @@
         }
     }
 
-    .order-link {
+    &__link {
         width: 100%;
         height: 60px;
         text-transform: uppercase;
