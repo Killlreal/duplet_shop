@@ -112,7 +112,7 @@ let hiddenPnone = document.querySelector('.phone');
 let hiddenProfile = document.querySelector('.profile');
 let hiddenNav = document.querySelector('.nav');
 
-searchBtn.onclick = () => {
+searchBtn.onclick = function () {
     searchBox.classList.add('active');
     searchInput.classList.add('input__active');
     searchBtn.classList.add('search__btn_active');
@@ -122,7 +122,7 @@ searchBtn.onclick = () => {
     hiddenNav.classList.add('nav__hidden');
 }
 
-cancelhBtn.onclick = () => {
+cancelhBtn.onclick = function () {
     searchBox.classList.remove('active');
     searchInput.classList.remove('input__active');
     searchBtn.classList.remove('search__btn_active');
@@ -142,7 +142,7 @@ let blockFirst = document.querySelector('.block__first');
 let mobileBlock = document.querySelector('.mobile__block');
 let blockSecond = document.querySelector('.block__second');
 
-searchBtnMobile.onclick = () => {
+searchBtnMobile.onclick = function () {
     searchBoxMobile.classList.add('active');
     searchInputMobile.classList.add('input__active');
     searchBtnMobile.classList.add('search__btn_active');
@@ -152,7 +152,7 @@ searchBtnMobile.onclick = () => {
     blockSecond.classList.add('block__second_active');
 }
 
-cancelhBtnMobile.onclick = () => {
+cancelhBtnMobile.onclick = function () {
     searchBoxMobile.classList.remove('active');
     searchInputMobile.classList.remove('input__active');
     searchBtnMobile.classList.remove('search__btn_active');
@@ -171,36 +171,78 @@ let descriptionBlock = document.querySelector('.card__description');
 let characteristicBlock = document.querySelector('.card__characteristic');
 
 
-description.onclick = () => {
-    if (descriptionBlock.classList.contains('hidden')) {
-        descriptionBlock.classList.remove('hidden');
-        characteristicBlock.classList.add('hidden');
-    }
+// description.onclick = function () {
+//     if (descriptionBlock.classList.contains('hidden')) {
+//         descriptionBlock.classList.remove('hidden');
+//         characteristicBlock.classList.add('hidden');
+//     }
 
-}
+// }
 
-characteristic.onclick = () => {
-    if (characteristicBlock.classList.contains('hidden')) {
-        characteristicBlock.classList.remove('hidden');
-        descriptionBlock.classList.add('hidden');
+// characteristic.onclick = function () {
+//     if (characteristicBlock.classList.contains('hidden')) {
+//         characteristicBlock.classList.remove('hidden');
+//         descriptionBlock.classList.add('hidden');
 
-    }
+//     }
 
-}
+// }
 
 // popup card__item
 
-let linkCart = document.querySelector('.add__to__cart');
-let popUp = document.querySelector('.popup__card__item');
-let closeBtn = document.querySelector('.close__popup');
+// let linkCart = document.querySelector('.add__to__cart');
+// let popUp = document.querySelector('.popup__card__item');
+// let closeBtn = document.querySelector('.close__popup');
 
 
-linkCart.onclick = () => {
-    popUp.classList.add('open__popup');
+// linkCart.onclick = function () {
+//     popUp.classList.add('open__popup');
+// }
+
+// closeBtn.onclick = function () {
+//     popUp.classList.remove('open__popup');
+
+// }
+
+//for number
+
+let buttonMinus = document.querySelectorAll('.btn__minus');
+let buttonPlus = document.querySelectorAll('.btn__plus');
+let inputNumber = document.querySelectorAll('.choose__number');
+
+
+for (let i = 0; i < buttonPlus.length; i++) {
+    buttonPlus[i].onclick = function () {
+        console.log('dddddd');
+
+        for (let j = 0; j < inputNumber.length; j++) {
+
+            let qty = parseInt(inputNumber[j].value);
+            qty = qty + 1;
+            inputNumber[j].value = qty;
+            console.log(inputNumber[j].value);
+
+        }
+    }
 }
 
-closeBtn.onclick = () => {
-    popUp.classList.remove('open__popup');
+for (let i = 0; i < buttonMinus.length; i++) {
+    buttonMinus[i].onclick = function () {
 
+        for (let j = 0; j < inputNumber.length; j++) {
+
+            let qty = parseInt(inputNumber[j].value);
+            qty = qty - 1;
+            inputNumber[j].value = qty;
+        }
+    }
 }
 
+
+//for card__important
+
+let cardImportant = document.querySelector('.card__important');
+
+cardImportant.onclick = function () {
+    cardImportant.classList.toggle('card__important_active');
+}

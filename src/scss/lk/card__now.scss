@@ -1,18 +1,10 @@
 .card {
-    height: 146px;
     position: relative;
     margin-bottom: 30px;
     display: grid;
-    grid-template-columns: 43% 7% 11% 12% 12%;
+    grid-template-columns: 380px 14% 15%;
     justify-content: space-between;
-
-    .card__info:nth-of-type(3) {
-        text-align: center;
-    }
-
-    .card__info:nth-of-type(4) {
-        text-align: center;
-    }
+    align-items: center;
 
     .card__info:last-child {
         text-align: end;
@@ -20,7 +12,7 @@
 
     &__act {
         position: absolute;
-        right: 5px;
+        right: 0;
         bottom: 0;
         display: flex;
 
@@ -49,18 +41,20 @@
         }
 
         .card__favorite {
-            margin-right: 30px;
+            margin-right: 25px;
         }
 
     }
 
     &__des {
         display: flex;
+        position: relative;
         width: 100%;
 
         .card__img {
-            max-width: 130px;
+            width: 100%;
             margin-right: 20px;
+            @import '../mixins/mixin__card';
 
             img {
                 width: 100%;
@@ -70,68 +64,71 @@
 
         }
 
+
         .card__text {
             font-family: FuturaBookC;
             font-style: normal;
             font-weight: normal;
             font-size: 14px;
             line-height: 125%;
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            position: relative;
+
 
             &_title {
                 font-family: FuturaBookC;
                 font-style: normal;
                 font-weight: normal;
-                font-size: 24px;
-                line-height: 27px;
+                font-size: 18px;
+                line-height: 24px;
                 text-transform: uppercase;
                 display: inline-flex;
                 position: relative;
+                max-width: 170px;
+                margin-bottom: 15px;
+            }
 
-                .card__important {
+            .mobile__block_hidden {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 15px;
+
+                .card__number_mobile {
                     display: flex;
-                    justify-content: center;
                     align-items: center;
-                    color: #000;
-                    overflow: hidden;
-                    height: 25px;
-                    cursor: pointer;
-                    background: #9D2F2F;
-                    border-radius: 50px;
-                    color: #fff;
-                    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                    margin: 0 0 15px 0;
 
-                    &_icon {
+                    .btn__minus,
+                    .btn__plus {
                         display: flex;
-                        justify-content: center;
-                        align-items: center;
+                        cursor: pointer;
+                        width: 15px;
+
+                        &:hover {
+                            color: #9D2F2F;
+                        }
+                    }
+
+                    .choose__number {
+                        text-align: center;
                         width: 25px;
-                        height: 25px;
-                        font-size: 18px;
-                        line-height: 20px;
+                        font-size: 16px;
+                        margin: 0 15px 0 15px;
                     }
 
-                    &_text {
-                        display: flex;
-                        align-items: center;
-                        font-size: 14px;
-                        line-height: 16px;
-                        width: 0;
-                        border-radius: 50px;
-                        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                    }
-
-                    &:hover .card__important_text {
-                        width: 330px;
-                        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                    .btn__plus {
+                        transform: rotate(180deg);
                     }
                 }
 
-                &_subtitle {
-                    min-width: 160px;
-                    height: 82px;
+                .card__in-all__mobile {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
                 }
             }
 
@@ -157,24 +154,38 @@
                 }
             }
         }
+
     }
 
-    &__discount,
-    &__price,
-    &__number,
-    &__in-all {
+
+    &__number {
         display: flex;
         align-items: center;
-    }
 
-    &__in-all {
-        flex-direction: column;
 
-        &_discount {
-            font-size: 14px;
-            line-height: 125%;
-            color: #888888;
-            text-decoration: line-through;
+        .btn__minus,
+        .btn__plus {
+            display: flex;
+            cursor: pointer;
+            width: 15px;
+
+            &:hover {
+                color: #9D2F2F;
+            }
+        }
+
+        .choose__number {
+            text-align: center;
+            width: 25px;
+            font-size: 16px;
+            margin: 0 15px 0 15px;
+        }
+
+        .btn__plus {
+            transform: rotate(180deg);
         }
     }
+
 }
+
+@import './card__now-media';

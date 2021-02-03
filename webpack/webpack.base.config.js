@@ -13,7 +13,7 @@ const PATHS = {
     dist: path.join(__dirname, '../dist'),
 }
 
-const PAGES_DIR = `${PATHS.src}/pug/cart`
+const PAGES_DIR = `${PATHS.src}/pug/catalog`
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
 module.exports = {
@@ -83,7 +83,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(png|jpg|gif|svg)$/,
+                test: /\.(png|jpg|gif|svg|jpeg)$/,
                 loader: 'file-loader',
                 options: {
                     name: `img/[name].[ext]`

@@ -1,4 +1,5 @@
 .cart {
+
     &__title {
         font-family: FuturaBookC;
         font-style: normal;
@@ -8,16 +9,20 @@
         margin-bottom: 40px;
     }
 
+
     &__order {
         width: 100%;
         display: flex;
-        justify-content: space-between;
-        align-items: start;
+        flex-wrap: wrap;
+        position: relative;
 
         .cards {
             width: 70%;
             margin-bottom: 40px;
+            margin-right: auto;
+            position: relative;
             @import 'scrollbar';
+
 
             &__titles {
                 font-family: FuturaBookC;
@@ -29,7 +34,7 @@
                 text-transform: uppercase;
                 height: 51px;
                 display: grid;
-                grid-template-columns: 43% 7% 11% 12% 12%;
+                grid-template-columns: 400px 7% 14% 12% 12%;
                 justify-content: space-between;
 
                 &_text:nth-of-type(3) {
@@ -47,12 +52,10 @@
             }
 
             &__items {
-                max-height: 445px;
                 padding-top: 30px;
-                overflow-y: auto;
                 border-bottom: 1px solid #E0E0E0;
                 border-top: 1px solid #E0E0E0;
-                @import 'cart__card';
+                @import 'card';
             }
 
             .attention {
@@ -100,9 +103,9 @@
         }
 
         @import 'confirm';
+        @import './cart__delivery';
     }
 
-    @import './cart__delivery';
 }
 
 @import './cart__media';

@@ -1,4 +1,4 @@
-.private-office {
+.lk {
     font-family: FuturaBookC;
     font-style: normal;
     font-weight: normal;
@@ -7,16 +7,18 @@
     &__title {
         font-size: 48px;
         line-height: 125%;
+        margin-bottom: 40px;
     }
 
-    &__flex {
+    &__block {
         display: flex;
         justify-content: space-between;
         margin-bottom: 80px;
 
-        .info {
+        .data {
             width: 315px;
-            //border: solid red;
+            min-width: 260px;
+            margin-right: 100px;
 
             &__title {
                 font-size: 24px;
@@ -24,8 +26,31 @@
                 margin-bottom: 30px;
             }
 
-            &__data {
+            &__box {
                 margin-bottom: 30px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .input__wrap {
+                    width: 100%;
+                    margin-bottom: 30px;
+                    color: #333;
+
+                    .input__box {
+                        width: 100%;
+                        padding: 16px 0 16px 20px;
+                        font-family: FuturaBookC;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 18px;
+                    }
+
+                    &::placeholder {
+                        color: #E0E0E0;
+                    }
+                }
 
                 .input__title {
                     font-size: 18px;
@@ -39,15 +64,8 @@
                 }
             }
 
-            &__edit {
-                height: 60px;
-                width: 315px;
-                background: #333333;
-                color: white;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
+            .data__edit {
+                width: 100%;
 
                 &:disabled {
                     background: #888;
@@ -55,20 +73,19 @@
             }
         }
 
-        .cart {
+        .cart__now {
             width: 891px;
-            //border: solid red;
             @import '../cart/scrollbar';
 
-            &__now {
+            &_title {
                 font-size: 24px;
                 line-height: 125%;
                 margin-bottom: 30px;
             }
 
-            &__block {
+            .cart__wrap {
                 max-height: 470px;
-                overflow-y: auto;
+                //overflow-y: auto;
 
                 .cart__booked {
                     margin-bottom: 40px;
@@ -83,6 +100,7 @@
                     &_box {
                         border-top: 2px solid #888;
                         padding-top: 20px;
+                        @import './card__now';
                     }
                 }
 
@@ -102,7 +120,6 @@
                     }
                 }
 
-                @import 'private-office-cart';
             }
         }
     }
@@ -110,3 +127,5 @@
 
 @import 'reserved';
 @import 'buy__history';
+
+@import './lk-media';
