@@ -35,10 +35,18 @@
 
 @media(max-width: 480px) {
     .card {
+        &__act {
+            .card__delete {
+                .card__title {
+                    display: none;
+                }
+            }
+        }
+
         &__des {
             .card__text {
                 &_title {
-                    font-size: 16px;
+                    font-size: 14px;
                     line-height: 18px;
                 }
             }

@@ -10,8 +10,9 @@
     }
 
     &__box {
-        .subtitles {
-            display: flex;
+        .name__box {
+            display: grid;
+            grid-template-columns: 340px 17% 20% 11% 12%;
             justify-content: space-between;
             font-size: 18px;
             line-height: 125%;
@@ -19,41 +20,18 @@
             text-transform: uppercase;
             margin-bottom: 20px;
 
-            [class*='subtitles__']:not(:last-child) {
-                margin-right: 5px;
+            .subtitles__status {
+                text-align: right;
             }
 
-            &__thing {
-                width: 350px;
-                border: solid red;
-            }
-
-            &__address {
-                width: 165px;
-                border: solid red;
-            }
-
-            &__info {
-                width: 240px;
-                border: solid red;
-            }
-
-            &__cost {
-                width: 110px;
-                border: solid red;
-            }
-
-            &__status {
-                width: 135px;
-                display: flex;
-                justify-content: flex-end;
-                border: solid red;
-            }
         }
 
         .reserved__things {
             border-top: 1px solid #E0E0E0;
-            @import 'reserved__cart';
+            padding-top: 20px;
+            @import 'reserved__card';
         }
     }
 }
+
+@import './media/reserved-media';

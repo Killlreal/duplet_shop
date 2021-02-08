@@ -241,8 +241,17 @@ for (let i = 0; i < buttonMinus.length; i++) {
 
 //for card__important
 
-let cardImportant = document.querySelector('.card__important');
+// let cardImportant = document.querySelector('.card__important');
 
-cardImportant.onclick = function () {
-    cardImportant.classList.toggle('card__important_active');
-}
+// cardImportant.onclick = function () {
+//     cardImportant.classList.toggle('card__important_active');
+// }
+
+// let closePopup = document.querySelector('.close__popup');
+// let lkPopup = document.querySelector('.lk__popup');
+
+
+// closePopup.onclick = function () {
+//     lkPopup.classList.toggle('hidden');
+
+// }

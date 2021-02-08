@@ -1,3 +1,5 @@
+@import '../popup/lk__popup';
+
 .lk {
     font-family: FuturaBookC;
     font-style: normal;
@@ -11,9 +13,10 @@
     }
 
     &__block {
+        height: auto;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 80px;
+        // margin-bottom: 80px;
 
         .data {
             width: 315px;
@@ -84,8 +87,6 @@
             }
 
             .cart__wrap {
-                max-height: 470px;
-                //overflow-y: auto;
 
                 .cart__booked {
                     margin-bottom: 40px;
@@ -117,6 +118,7 @@
                     &_box {
                         border-top: 2px solid #888;
                         padding-top: 20px;
+                        @import './card__now';
                     }
                 }
 
@@ -128,4 +130,4 @@
 @import 'reserved';
 @import 'buy__history';
 
-@import './lk-media';
+@import './media/lk-media';

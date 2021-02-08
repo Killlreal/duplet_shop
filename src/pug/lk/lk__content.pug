@@ -1,24 +1,25 @@
+include ../popup/lk__popup.pug
 section.lk
     .wrapper
         .lk__title Личный кабинет
         .lk__block
-            //- .data
-            //-     .data__title Информация
-            //-     .data__box
-            //-         .input__wrap
-            //-             .input__title ФИО
-            //-             input#name.input__box.input__full__name(type="text", name="" placeholder="Укажите ФИО")
-            //-         .input__wrap
-            //-             .input__title Телефон
-            //-             input#phone.input__box.input__phone(type="text", name="" placeholder="Укажите Ваш Телефон")
-            //-         .input__wrap
-            //-             .input__title E-mail
-            //-             input#mail.input__box.input__email(type="text", name="" placeholder="Укажите Ваш e-mail")
-            //-         .input__wrap
-            //-             .input__title Номер дисконтной карты
-            //-             input#card.input__box.input__payment__card(type="text", name="" placeholder="Укажите Ваш номер карты")
-            //-         .btn.data__edit
-            //-             span.btn__name редактировать данные
+            .data
+                .data__title Информация
+                .data__box
+                    .input__wrap
+                        .input__title ФИО
+                        input#name.input__box.input__full__name(type="text", name="" placeholder="Укажите ФИО")
+                    .input__wrap
+                        .input__title Телефон
+                        input#phone.input__box.input__phone(type="text", name="" placeholder="Укажите Ваш Телефон")
+                    .input__wrap
+                        .input__title E-mail
+                        input#mail.input__box.input__email(type="text", name="" placeholder="Укажите Ваш e-mail")
+                    .input__wrap
+                        .input__title Номер дисконтной карты
+                        input#card.input__box.input__payment__card(type="text", name="" placeholder="Укажите Ваш номер карты")
+                    .btn.data__edit
+                        span.btn__name редактировать данные
             .cart__now
                 .cart__now_title Корзина сейчас
                 .cart__wrap
@@ -60,6 +61,9 @@ section.lk
                                     .choose__number 1
                                     .btn__plus.icon-number
                                 .card__in-all.card__info ₽99 739 000
+                    .cart__bought
+                        .cart__bought_title Покупка
+                        .cart__bought_box
                             .card
                                 .card__act
                                     .card__favorite
@@ -95,8 +99,5 @@ section.lk
                                     .choose__number 1
                                     .btn__plus.icon-number
                                 .card__in-all.card__info ₽99 739 000
-                    .cart__bought
-                        .cart__bought_title Покупка
-                        .cart__bought_box
-//- include reserved.pug
-//- include buy__history.pug
+include reserved.pug
+include buy__history.pug

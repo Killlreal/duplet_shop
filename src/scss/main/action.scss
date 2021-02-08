@@ -1,11 +1,11 @@
 @import "../mixins/mixins";
 
-.action {
+.discount__block {
   width: 100wh;
   height: 740px;
   margin-bottom: 80px;
 
-  &__blocks {
+  .action__box {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
@@ -134,4 +134,4 @@
   }
 }
 
-@import "./action-media";
+@import "./media/action-media";

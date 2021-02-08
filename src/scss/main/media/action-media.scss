@@ -1,6 +1,6 @@
 @media(max-width: 1200px) {
-    .action {
-        &__blocks {
+    .discount__block {
+        .action__box {
             .wrap {
                 .title {
                     &__text {
@@ -37,10 +37,10 @@
 }
 
 @media(max-width: 992px) {
-    .action {
+    .discount__block {
         height: auto;
 
-        &__blocks {
+        .action__box {
             flex-wrap: wrap;
 
             .wrap {
@@ -76,17 +76,17 @@
 }
 
 @media(max-width: 768px) {
-    .action {
+    .discount__block {
         margin-bottom: 60px;
     }
 }
 
 
 @media(max-width: 480px) {
-    .action {
+    .discount__block {
         margin-bottom: 40px;
 
-        &__blocks {
+        .action__box {
             margin-bottom: 30px;
 
             .wrap {
