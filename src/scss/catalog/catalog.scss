@@ -2,14 +2,6 @@
   width: 100wh;
   margin-bottom: 60px;
 
-  .catalog-guns__title {
-    text-align: center;
-    font-weight: normal;
-    font-size: 48px;
-    line-height: 125%;
-    color: #333333;
-  }
-
   @import "filter";
 
   .cards {
@@ -22,7 +14,11 @@
     margin-bottom: 60px;
   }
 
-  @import '../vars/vars';
+  .catalog__next {
+
+    width: 180px;
+    margin: 0 auto;
+  }
 
   .show__more {
     font-size: 18px;
@@ -36,7 +32,7 @@
 
   .better__category {
     @import '../slider/main-slider';
-    @import '../mixins/mixin__card';
+    @import '../mixins/mixin__product';
   }
 }
 

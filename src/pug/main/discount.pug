@@ -1,0 +1,41 @@
+section.discount__block
+    .wrapper
+        .action__box
+            .wrap
+                .title 
+                    h1.title__text Акции и скидки
+                    p.title__description.
+                        Подпишитесь на нашу рассылку, 
+                        чтобы первым получать уведомления о 
+                        новых поступлениях, товарах, которые 
+                        продаются по скидке, а также об акциях
+                .discount__item.green
+                    .discount__box
+                        .block__wrap
+                            .discount__box_title Палатки фирмы Outventure 
+                            .discount__box_text Скидки до 25% только до конца сентября
+                            .discount__box_link.link Купить сейчас
+                        .img__wrap
+                            img.discount__box_img(src=require("../../img/tent.png").default, alt="")
+            .wrap
+                .discount__item.gray
+                    .discount__box
+                        .block__wrap
+                            .discount__box_title Палатки фирмы Outventure 
+                            .discount__box_text Скидки до 25% только до конца сентября
+                            .discount__box_link.link Купить сейчас
+                        .img__wrap
+                            img.discount__box_img(src=require("../../img/kam.png").default, alt="")
+                form.email(action="", method="")
+                    .email__title
+                        .email__title_main Оставьте свой e-mail
+                        .email__title_notification И получайте уведомления
+                    .email__send
+                        .input
+                            input.for__input(type="email" placeholder="Ваш e-mail" required)
+                            .mistake__info
+                                figure.icon-info
+                                .mistake__info_title Ой, кажется такого e-mail не существует
+                        a.btn(href="#")
+                            span.btn__name Отправить
+        a.link__to.link__center(href="#") Больше акций

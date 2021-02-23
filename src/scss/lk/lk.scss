@@ -6,20 +6,13 @@
     font-weight: normal;
     width: 100%;
 
-    &__title {
-        font-size: 48px;
-        line-height: 125%;
-        margin-bottom: 40px;
-    }
-
     &__block {
         height: auto;
         display: flex;
-        justify-content: space-between;
         // margin-bottom: 80px;
 
         .data {
-            width: 315px;
+            width: 330px;
             min-width: 260px;
             margin-right: 100px;
 
@@ -77,7 +70,7 @@
         }
 
         .cart__now {
-            width: 891px;
+            width: 100%;
             @import '../cart/scrollbar';
 
             &_title {

@@ -1,2 +1,2 @@
-import './js/script.js';
+import './js/killreal.js';
 import './scss/style.scss';

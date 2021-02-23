@@ -73,7 +73,7 @@
             position: absolute;
             top: 0;
             left: 350px;
-            z-index: 100;
+            z-index: 2;
 
             &_icon {
                 display: flex;
@@ -106,7 +106,7 @@
         .card__img {
             width: 70%;
             margin-right: 20px;
-            @import '../mixins/mixin__card';
+            @import '../mixins/mixin__product';
 
             img {
                 width: 100%;
@@ -228,6 +228,8 @@
             display: flex;
             cursor: pointer;
             width: 15px;
+            height: 17px;
+            text-align: center;
 
             &:hover {
                 color: #9D2F2F;

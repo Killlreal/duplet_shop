@@ -1,4 +1,3 @@
-include ../mixins/test.pug
 include ../mixins/product.pug
 include ../popup/card__item__popup.pug
 section.card__item
@@ -46,13 +45,22 @@ section.card__item
                     предназначенное для промысловой и любительской охоты, 
                     разработанное  конструктором-оружейником Н. И. Коровяковым.
                 .card__item_price
-                    .price__discount ₽ 45 999
-                    .price__box
-                        .price__cost ₽ 39 999
-                        .price__available В наличии
+                    .discount__price ₽ 39 999
+                    .main__price.closed
+                        span.main__price_title ₽ 66 999
+                    .status
+                        .available.hidden
+                            figure.icon-available
+                            span.available__title В наличии
+                        .unavailable
+                            figure.icon-menu-cancel
+                            span.unavailable__title Нет в наличии
                 .order__box
                     .order__container
-                        input.choose__number(type="number" min="1" max="50")
+                        .choose__number_box
+                            .btn__minus.icon-number
+                            .choose__number 99
+                            .btn__plus.icon-number-right
                         button.to__cart.add__to__cart(type="submit") в корзину
                     .to__favorite
                         figure.icon-liked

@@ -1,11 +1,12 @@
 @import "./fonts/fonts";
-@import "./default/default";
 @import './vars/vars';
+@import "./default/default";
+@import './class/class';
 @import "./header/header";
 @import "./footer/footer";
 @import "./main/welcome";
-@import "./main/novelty";
+@import "./main/new";
 @import "./main/class";
-@import "./main/action";
+@import "./main/discount";
 @import "./main/popular";
-@import "./main/tidings";
+@import "./main/news";
